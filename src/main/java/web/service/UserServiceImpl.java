@@ -38,19 +38,17 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public boolean saveUser(User user) {
+    public void saveUser(User user) {
         if (user.getId() == 0) {
             entityManager.persist(user);
         } else {
             entityManager.merge(user);
         }
-        return true;
     }
 
     @Override
-    public boolean deleteUserById(Long id) {
+    public void deleteUserById(Long id) {
         entityManager.remove(getUserById(id));
-        return true;
     }
 
     @Override
