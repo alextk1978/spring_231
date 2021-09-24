@@ -1,4 +1,4 @@
-package web.service;
+package web.dao;
 
 import org.springframework.stereotype.Service;
 import web.model.User;
@@ -12,12 +12,12 @@ import java.util.List;
 
 @Service
 @Transactional
-public class UserServiceImpl implements UserService {
+public class UserDaoImpl implements UserDao {
 
     @PersistenceContext
     private EntityManager entityManager;
 
-    public UserServiceImpl(EntityManager entityManager) {
+    public UserDaoImpl(EntityManager entityManager) {
         this.entityManager = entityManager;
     }
 

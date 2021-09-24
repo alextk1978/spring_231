@@ -5,15 +5,15 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import web.model.User;
-import web.service.UserService;
+import web.dao.UserDao;
 
 @Controller
 public class UserController {
 
-    private final UserService userServiceImpl;
+    private final UserDao userServiceImpl;
 
     @Autowired
-    public UserController(UserService userServiceImpl) {
+    public UserController(UserDao userServiceImpl) {
         this.userServiceImpl = userServiceImpl;
     }
 
