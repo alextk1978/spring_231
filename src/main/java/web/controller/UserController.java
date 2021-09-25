@@ -5,15 +5,18 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import web.model.User;
-import web.dao.UserDao;
+import web.service.UserService;
 
 @Controller
 public class UserController {
 
-    private final UserDao userServiceImpl;
+    private UserService userServiceImpl;
+
+    public UserController() {
+    }
 
     @Autowired
-    public UserController(UserDao userServiceImpl) {
+    public UserController(UserService userServiceImpl) {
         this.userServiceImpl = userServiceImpl;
     }
 
@@ -46,7 +49,7 @@ public class UserController {
         return "edit";
     }
 
-    @PostMapping("/{id}")
+    @PatchMapping("/{id}")
     public String update(@ModelAttribute("user") User user, @PathVariable("id") long id) {
         userServiceImpl.updateUser(user, id);
         return "redirect:/";

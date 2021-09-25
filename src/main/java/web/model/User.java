@@ -1,27 +1,22 @@
 package web.model;
 
-import lombok.Getter;
-import lombok.Setter;
-
 import javax.persistence.*;
 
 @Entity
 @Table(name = "user")
-@Getter
-@Setter
 public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @Column (name = "firstname")
+    @Column(name = "firstname")
     private String firstName;
 
-    @Column (name = "lastname")
+    @Column(name = "lastname")
     private String lastName;
 
-    @Column (name = "age")
+    @Column(name = "age")
     private int age;
 
     public User() {
@@ -36,10 +31,6 @@ public class User {
 
     public long getId() {
         return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
     }
 
     public String getFirstName() {
