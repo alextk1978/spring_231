@@ -10,54 +10,54 @@ import web.service.UserService;
 @Controller
 public class UserController {
 
-    private UserService userServiceImpl;
+    private UserService userService;
 
     public UserController() {
     }
 
     @Autowired
     public UserController(UserService userServiceImpl) {
-        this.userServiceImpl = userServiceImpl;
+        this.userService = userServiceImpl;
     }
 
     @GetMapping()
     public String index(Model model) {
-        model.addAttribute("users", userServiceImpl.getAllUsers());
-        return "index";
+        model.addAttribute("users", userService.getAllUsers());
+        return "/index";
     }
 
     @GetMapping("/{id}")
     public String show(@PathVariable("id") long id, Model model) {
-        model.addAttribute("user", userServiceImpl.getUserById(id));
-        return "show";
+        model.addAttribute("user", userService.getUserById(id));
+        return "/show";
     }
 
     @GetMapping("/new")
     public String newUser(@ModelAttribute("user") User user) {
-        return "new";
+        return "/new";
     }
 
     @PostMapping()
-    public String create(@ModelAttribute("user") User user) {
-        userServiceImpl.saveUser(user);
+    public String create(@ModelAttribute("person") User user) {
+        userService.saveUser(user);
         return "redirect:/";
     }
 
-    @GetMapping("/{id}/edit")
+    @GetMapping("/edit/{id}")
     public String edit(Model model, @PathVariable("id") long id) {
-        model.addAttribute("user", userServiceImpl.getUserById(id));
-        return "edit";
+        model.addAttribute("user", userService.getUserById(id));
+        return "/edit";
     }
 
     @PatchMapping("/{id}")
     public String update(@ModelAttribute("user") User user, @PathVariable("id") long id) {
-        userServiceImpl.updateUser(user, id);
+        userService.updateUser(user, id);
         return "redirect:/";
     }
 
-    @DeleteMapping("/{id}")
+    @GetMapping("/delete/{id}")
     public String delete(@PathVariable("id") long id) {
-        userServiceImpl.deleteUserById(id);
+        userService.deleteUserById(id);
         return "redirect:/";
     }
 }
