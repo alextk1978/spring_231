@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.*;
 import web.model.User;
 import web.service.UserService;
 
+import javax.annotation.PostConstruct;
+
 @Controller
 public class UserController {
 
@@ -18,6 +20,12 @@ public class UserController {
     @Autowired
     public UserController(UserService userServiceImpl) {
         this.userService = userServiceImpl;
+    }
+
+    @PostConstruct
+    private void initMethod(){
+        User defaultUser = new User("Alexey", "Tkachenko", 43);
+        userService.saveUser(defaultUser);
     }
 
     @GetMapping()
