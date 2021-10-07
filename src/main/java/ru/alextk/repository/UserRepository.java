@@ -1,6 +1,6 @@
-package ru.itsinfo.repository;
+package ru.alextk.repository;
 
-import ru.itsinfo.model.User;
+import ru.alextk.model.User;
 
 import java.util.List;
 

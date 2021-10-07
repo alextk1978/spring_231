@@ -1,9 +1,9 @@
-package ru.itsinfo.config;
+package ru.alextk.config;
 
 import org.springframework.web.filter.CharacterEncodingFilter;
 import org.springframework.web.filter.HiddenHttpMethodFilter;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
-import ru.itsinfo.config.listener.AppContextListener;
+import ru.alextk.config.listener.AppContextListener;
 
 import javax.servlet.FilterRegistration;
 import javax.servlet.ServletContext;

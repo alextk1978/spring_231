@@ -1,4 +1,4 @@
-package ru.itsinfo.aspect;
+package ru.alextk.aspect;
 
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 @Aspect
 public class LoggingAspect {
 
-    @Around("execution(* ru.itsinfo.repository.*.*(..))")
+    @Around("execution(* ru.alextk.repository.*.*(..))")
     public Object aroundAllRepositoryMethodsAdvice(ProceedingJoinPoint joinPoint) throws Throwable {
 
         System.out.println("Start method " + joinPoint.getSignature());

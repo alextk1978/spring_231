@@ -1,9 +1,9 @@
-package ru.itsinfo.service;
+package ru.alextk.service;
 
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import ru.itsinfo.repository.UserRepository;
-import ru.itsinfo.model.User;
+import ru.alextk.repository.UserRepository;
+import ru.alextk.model.User;
 
 import java.util.List;
 

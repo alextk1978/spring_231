@@ -1,6 +1,6 @@
-package ru.itsinfo.service;
+package ru.alextk.service;
 
-import ru.itsinfo.model.User;
+import ru.alextk.model.User;
 
 import java.util.List;
 

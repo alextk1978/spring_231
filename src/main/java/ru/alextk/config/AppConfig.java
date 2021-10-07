@@ -1,4 +1,4 @@
-package ru.itsinfo.config;
+package ru.alextk.config;
 
 import com.mchange.v2.c3p0.ComboPooledDataSource;
 import org.springframework.context.annotation.Bean;
@@ -44,7 +44,7 @@ public class AppConfig {
         JpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
         LocalContainerEntityManagerFactoryBean em = new LocalContainerEntityManagerFactoryBean(); // HibernateExceptions, PersistenceExceptions... to DataAccessException
         em.setDataSource(dataSource());
-        em.setPackagesToScan("ru.itsinfo.model");
+        em.setPackagesToScan("ru.alextk.model");
         em.setJpaVendorAdapter(vendorAdapter);
         return em;
     }

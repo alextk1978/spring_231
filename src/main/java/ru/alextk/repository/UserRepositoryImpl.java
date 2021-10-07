@@ -1,7 +1,7 @@
-package ru.itsinfo.repository;
+package ru.alextk.repository;
 
 import org.springframework.stereotype.Repository;
-import ru.itsinfo.model.User;
+import ru.alextk.model.User;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;

@@ -1,12 +1,12 @@
-package ru.itsinfo.controller;
+package ru.alextk.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
-import ru.itsinfo.model.User;
-import ru.itsinfo.service.UserService;
+import ru.alextk.model.User;
+import ru.alextk.service.UserService;
 
 import javax.validation.Valid;
 

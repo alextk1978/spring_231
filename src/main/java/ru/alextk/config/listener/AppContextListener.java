@@ -1,4 +1,4 @@
-package ru.itsinfo.config.listener;
+package ru.alextk.config.listener;
 
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;

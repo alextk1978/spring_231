@@ -1,4 +1,4 @@
-package ru.itsinfo.config;
+package ru.alextk.config;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
@@ -14,7 +14,7 @@ import org.thymeleaf.spring5.view.ThymeleafViewResolver;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan(basePackages = {"ru.itsinfo"})
+@ComponentScan(basePackages = {"ru.alextk"})
 public class MvcConfig implements WebMvcConfigurer {
 
     private final ApplicationContext applicationContext;
